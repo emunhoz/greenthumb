@@ -1,16 +1,8 @@
 import axios from 'axios'
-import { getToken } from './auth'
 
 const HTTP_CLIENT = axios.create({
-  baseURL: 'https://node-api-jwt-test.herokuapp.com/api'
-})
-
-HTTP_CLIENT.interceptors.request.use(async config => {
-  const token = getToken()
-  if (token) {
-    config.headers['x-access-token'] = `Bearer ${token}`
-  }
-  return config
+  baseURL:
+    'https://6nrr6n9l50.execute-api.us-east-1.amazonaws.com/default/front-plantTest-service'
 })
 
 export default HTTP_CLIENT
