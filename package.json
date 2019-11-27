@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/preset-env": "^7.7.4",
     "@babel/runtime": "^7.7.4",
     "axios": "^0.19.0",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -16,7 +17,9 @@
     "react-scripts": "3.2.0",
     "redux": "^4.0.4",
     "redux-persist": "^6.0.0",
-    "styled-components": "^4.4.1"
+    "styled-components": "^4.4.1",
+    "@babel/runtime-corejs2": "^7.4.5",
+    "core-js": "^2.6.9"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -45,16 +48,20 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "^5.2.6",
-    "@storybook/addon-centered": "^5.2.6",
-    "@storybook/addon-info": "^5.2.6",
-    "@storybook/addon-knobs": "^5.2.6",
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.4.4",
+    "@storybook/addon-actions": "^5.2.6",
+    "@storybook/addon-links": "^5.2.6",
+    "@storybook/addons": "^5.2.6",
     "@storybook/react": "^5.2.6",
-    "@storybook/addon-viewport": "^5.2.6",
-    "@storybook/storybook-deployer": "^2.8.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@types/jest": "^24.0.23",
+    "babel-loader": "^8.0.6",
     "babel-plugin-inline-react-svg": "^1.1.0",
     "eslint": "^6.7.1",
     "eslint-config-prettier": "^6.7.0",
