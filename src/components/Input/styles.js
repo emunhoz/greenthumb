@@ -1,25 +1,49 @@
 import styled from 'styled-components'
 
-export const Input = styled.input`
+export const Wrapper = styled.div`
+  margin-bottom: 55px;
+`
+
+export const Field = styled.input`
   background: #fff;
-  border: 0;
-  border: 2px solid #f2f2f2;
-  padding: 12px;
-  color: inherit;
-  font: inherit;
-  line-height: inherit;
+  border: 1px solid transparent;
+  padding: 12px 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
   appearance: none;
-  border-radius: 0.25em;
+  border-radius: 19px;
   margin-bottom: 20px;
   width: 100%;
-  &:last-of-type {
-    margin-bottom: 60px;
+  transition: all .5s ease;
+  margin-bottom: 0;
+
+  &:focus {
+    box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.0896799);
+    outline: none;
   }
 
-  &:-webkit-autofill,
-  &:-webkit-autofill:hover,
-  &:-webkit-autofill:focus,
-  &:-webkit-autofill:active {
-    box-shadow: 0 0 0 30px white inset !important;
+  &.error {
+    border: 1px solid var(--danger);
+    color: var(--danger);
+    box-shadow: none;
+  }
+
+  + label {
+    display: block;
+    margin-top: 55px;
+  }
+
+  + p {
+    color: var(--danger);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 27px;
+    margin-bottom: 20px;
+    svg {
+      width: 15px;
+    }
   }
 `
