@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
     --primary: #15573F;
     --primary-light: #7BAF9E;
     --secondary: #FD9872;
+    --danger: #F71D1D;
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
