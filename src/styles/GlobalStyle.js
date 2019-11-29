@@ -11,17 +11,13 @@ const GlobalStyle = createGlobalStyle`
 
   :root {
     --white: #fff;
-    --gray: #6c757d;
+    --gray-light: #ACACAC;
+    --text: #6E6E6E;
     --gray-dark: #343a40;
     --primary: #15573F;
     --primary-light: #7BAF9E;
     --secondary: #FD9872;
     --danger: #F71D1D;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
   }
 
   body, html {
