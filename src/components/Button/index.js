@@ -7,7 +7,7 @@ const Button = props => (
 )
 
 Button.propTypes = {
-  icon: PropTypes.func,
+  icon: PropTypes.bool,
   children: PropTypes.string
 }
 
