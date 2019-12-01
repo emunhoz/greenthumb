@@ -11,9 +11,10 @@ const GlobalStyle = createGlobalStyle`
 
   :root {
     --white: #fff;
+    --background: #F2F2F2;
     --gray-light: #ACACAC;
-    --text: #6E6E6E;
     --gray-dark: #343a40;
+    --text: #6E6E6E;
     --primary: #15573F;
     --primary-light: #7BAF9E;
     --secondary: #FD9872;
@@ -21,20 +22,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body, html {
-    background: #fff;
     font-family: 'Montserrat', sans-serif;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
-  }
-
-  #root {
-    display: grid;
-    grid-template-areas:
-        "header"
-        "main";
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr;
-    min-height: 100vh;
   }
 `
 
