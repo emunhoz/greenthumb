@@ -5,6 +5,7 @@ import ErrorBoundary from './utils/ErrorBoundary'
 import HomePage from './pages/Home'
 import SunLight from './pages/SunLight'
 import WaterPage from './pages/Water'
+import DogPage from './pages/Dogs'
 
 const Routes = () => (
   <Router history={History}>
@@ -13,6 +14,7 @@ const Routes = () => (
         <Route exact path='/' component={HomePage} />
         <Route exact path='/sunlight' component={SunLight} />
         <Route exact path='/water' component={WaterPage} />
+        <Route exact path='/dogs' component={DogPage} />
         <Route path='*' component={() => <h1>Page not found</h1>} />
       </Switch>
     </ErrorBoundary>
