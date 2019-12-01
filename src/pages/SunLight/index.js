@@ -9,7 +9,7 @@ import { ReactComponent as NoAnswer } from '../../images/icons/coral/no-answer.s
 import Sun from '../../images/illustrations/sun.png'
 import * as S from './styles'
 
-const HomePage = () => (
+const SunLightPage = () => (
   <Layout>
     <S.Main>
       <StepMessage img={Sun}>First, set the amount of <strong>sunlight</strong> your plant will get.</StepMessage>
@@ -19,11 +19,11 @@ const HomePage = () => (
         <Card icon={NoAnswer} text='No sunlight' color='#FD9872' />
         <S.Navs>
           <BtnLink to='/' icon='left' shape='line'>home</BtnLink>
-          <BtnLink to='/' icon='right' shape='line'>next</BtnLink>
+          <BtnLink to='/water' icon='right' shape='line'>next</BtnLink>
         </S.Navs>
       </S.Wrapper>
     </S.Main>
   </Layout>
 )
 
-export default HomePage
+export default SunLightPage
