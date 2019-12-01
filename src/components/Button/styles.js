@@ -6,14 +6,14 @@ export const Button = styled.button`
   background: ${({ shape }) => shape === 'line' ? 'var(--white)' : 'var(--primary)'};
   color: ${({ shape }) => shape === 'line' ? 'var(--primary)' : 'var(--white)'};
   box-sizing: border-box;
-  width: ${({ block }) => block ? '100%' : '170px'};
-  height: 50px;
+  min-width: ${({ block }) => block ? '100%' : '170px'};
+  min-height: 50px;
   border-radius: 25px;
   font-size: 16px;
   font-family: Montserrat;
-  font-style: normal;
   font-weight: 300;
   line-height: 20px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,5 +35,5 @@ export const Button = styled.button`
 export const ArrowIcon = styled(ArrowRight)`
   position: absolute;
   height: 28px;
-  left: 14px;
+  left: 10px;
 `
