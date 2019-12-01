@@ -5,15 +5,16 @@ export const Card = styled.div`
   background: var(--white);
   box-shadow: 0px 20px 34px rgba(0, 0, 0, 0.0758577);
   border-radius: 5px;
-  width: 265px;
   height: 74px;
   font-weight: 300;
   font-size: 16px;
   line-height: 34px;
   padding: 20px;
   color: var(--gray-light);
+  width: 100%;
+  margin-bottom: 20px;
 
-  display: flex;
+  display: inline-flex;
   align-items: center;
 
   svg {
@@ -37,7 +38,8 @@ export const Card = styled.div`
 
 
   ${media.greaterThan('medium')`
-    width: 215px;
+    max-width: 215px;
+    width: 100%;
     height: 190px;
     flex-flow: column;
     padding: 29px;

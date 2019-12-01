@@ -6,6 +6,12 @@ export const Header = styled.header`
   align-items: center;
   justify-content: center;
   grid-area: header;
+
+  ${media.greaterThan('medium')`
+    text-align: center;
+    padding: 61px 0;
+    display: block;
+  `}
 `
 
 export const Logo = styled.img`
@@ -16,5 +22,6 @@ export const Logo = styled.img`
   ${media.greaterThan('medium')`
     width: auto;
     height: auto;
+    margin: 0;
   `}
 `

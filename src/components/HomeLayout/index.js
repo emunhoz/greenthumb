@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import LogoGreenThumb from '../../images/logo-greenthumb.svg'
-import Button from '../Button'
+import BtnLink from '../BtnLink'
 import * as S from './styles'
 
 const HomeLayout = ({ children }) => (
@@ -9,7 +9,7 @@ const HomeLayout = ({ children }) => (
     <S.Header>
       <S.Logo src={LogoGreenThumb} alt='Logo' />
       <S.Title>Find your next green friend</S.Title>
-      <Button icon>start quizz</Button>
+      <BtnLink icon='right' to='/sunlight'>start quizz</BtnLink>
     </S.Header>
     {children}
   </S.HomeLayout>

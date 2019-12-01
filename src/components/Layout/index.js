@@ -11,7 +11,7 @@ const Layout = ({ children, color = 'var(--background)' }) => (
 )
 
 Layout.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.object,
   color: PropTypes.string
 }
 

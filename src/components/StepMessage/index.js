@@ -11,7 +11,7 @@ const StepMessage = ({ img, children }) => (
 
 StepMessage.propTypes = {
   img: PropTypes.string,
-  children: PropTypes.object
+  children: PropTypes.array
 }
 
 export default StepMessage

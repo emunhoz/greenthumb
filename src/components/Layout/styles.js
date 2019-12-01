@@ -9,6 +9,7 @@ export const Layout = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: 80px 1fr;
   min-height: 100vh;
+  padding: 61px 0;
 
   ${media.greaterThan('medium')`
     grid-template-areas:
