@@ -42,11 +42,11 @@ export const Card = styled.div`
     width: 100%;
     height: 190px;
     flex-flow: column;
-    padding: 29px;
+    padding: 29px 0;
     color: var(--text);
 
     svg {
-      width: 69px;
+      width: 100%;
       height: 68px;
       margin-bottom: 22px;
       margin-right: 0;

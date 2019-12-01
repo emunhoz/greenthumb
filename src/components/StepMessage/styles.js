@@ -8,13 +8,10 @@ export const StepMessage = styled.div`
 `
 
 export const Img = styled.img`
-  width: 96px;
   height: 96px;
   margin-bottom: 21px;
 
   ${media.greaterThan('medium')`
-    width: 126px;
-    height: 126px;
     margin-bottom: 30px;
   `}
 `
