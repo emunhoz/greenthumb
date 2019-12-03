@@ -10,15 +10,17 @@ export const Main = styled.main`
 `
 
 export const WarningMessage = styled.p`
+  font-size: 14px;
+  line-height: 25px;
   text-align: center;
   font-weight: 300;
-  font-size: 14px;
-  line-height: 39px;
   color: var(--text);
   margin-bottom: 47px;
   width: 100%;
 
+
   ${media.greaterThan('medium')`
+    line-height: 39px;
     margin-bottom: 39px;
   `}
 `
@@ -28,7 +30,7 @@ export const Wrapper = styled.div`
   flex-flow: column;
 
   ${media.greaterThan('medium')`
-    max-width: 705px;
+    max-width: 460px;
     margin: 0 auto;
     display: flex;
     flex-flow: wrap;
