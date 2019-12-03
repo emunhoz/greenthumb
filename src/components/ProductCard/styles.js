@@ -1,26 +1,13 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
-  display: flex;
-  max-width: 864px;
-  overflow: auto;
-  margin-bottom: 38px;
-`
-
 export const ProductCard = styled.div`
-  display: flex;
-  flex-flow: column;
   background: var(--white);
   box-shadow: 0px 28px 38px rgba(0, 0, 0, 0.0925754);
   border-radius: 5px;
-  height: 100%;
-  max-height: 342px;
   padding: 28px;
-  margin-right: 30px;
-
-  &:hover {
-    cursor: pointer;
-  }
+  max-width: 268px;
+  display: flex;
+  flex-flow: column;
 `
 
 export const Img = styled.img`
@@ -50,4 +37,12 @@ export const Price = styled.span`
 
 export const Icons = styled.span`
   display: flex;
+  svg {
+    height: 23px;
+    width: 23px;
+    margin-right: 5px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 `

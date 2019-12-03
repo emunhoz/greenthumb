@@ -15,27 +15,35 @@ const Background = styled.div`
 const data = [
   {
     id: 1,
-    img: 'https://media.gettyimages.com/photos/closeup-of-potted-plant-against-white-background-picture-id1032762284?s=2048x2048',
-    title: 'Title example',
-    value: '$30',
-    features: 'test'
+    name: 'Succulent Bowl',
+    sun: 'high',
+    water: 'rarely',
+    url: 'https://front-static-recruitment.s3.amazonaws.com/succulent-bowl.jpg',
+    price: 10,
+    toxicity: false
   },
   {
     id: 2,
-    img: 'https://media.gettyimages.com/photos/closeup-of-potted-plant-against-white-background-picture-id1032762284?s=2048x2048',
-    title: 'Title example',
-    value: '$30',
-    features: 'test'
+    name: 'Succulent Bowl',
+    sun: 'high',
+    water: 'rarely',
+    url: 'https://front-static-recruitment.s3.amazonaws.com/succulent-bowl.jpg',
+    price: 20,
+    toxicity: false
   },
   {
     id: 3,
-    img: 'https://media.gettyimages.com/photos/closeup-of-potted-plant-against-white-background-picture-id1032762284?s=2048x2048',
-    title: 'Title example',
-    value: '$30',
-    features: 'test'
+    name: 'Succulent Bowl',
+    sun: 'high',
+    water: 'rarely',
+    url: 'https://front-static-recruitment.s3.amazonaws.com/succulent-bowl.jpg',
+    price: 30,
+    toxicity: true
   }
 ]
 
 export const primary = () => (
-  <Background><ProductCard items={data} /></Background>
+  <Background>
+    <ProductCard items={data} />
+  </Background>
 )
