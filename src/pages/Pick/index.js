@@ -23,10 +23,11 @@ const PickPage = () => {
           <img src={Pick} alt='' />
           <S.Title>Our picks for you</S.Title>
         </S.Wrapper>
-        <S.WrapperCards />
-        {data.map((item, k) => (
-          <ProductCard items={item} key={k} />
-        ))}
+        <S.WrapperCards>
+          {data.map((item, k) => (
+            <ProductCard items={item} key={k} />
+          ))}
+        </S.WrapperCards>
       </S.Main>
     </Layout>
   )
