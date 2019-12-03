@@ -16,7 +16,7 @@ const Routes = () => (
         <Route exact path='/sunlight' component={SunLightPage} />
         <Route exact path='/water' component={WaterPage} />
         <Route exact path='/dogs' component={DogPage} />
-        <Route exact path='/finish' component={PickPage} />
+        <Route exact path='/pick' component={PickPage} />
         <Route path='*' component={() => <h1>Page not found</h1>} />
       </Switch>
     </ErrorBoundary>
