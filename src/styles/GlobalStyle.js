@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
     --gray-light: #ACACAC;
     --gray-dark: #343a40;
     --text: #6E6E6E;
+    --title-highlighted: #0C261C;
     --primary: #15573F;
     --primary-light: #7BAF9E;
     --secondary: #FD9872;
