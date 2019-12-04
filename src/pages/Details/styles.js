@@ -13,7 +13,9 @@ export const Main = styled.main`
 `
 
 export const PlantInfo = styled.div`
-  max-width: 380px;
+  ${media.greaterThan('medium')`
+    max-width: 380px;
+  `}
 `
 
 export const Title = styled.h2`
