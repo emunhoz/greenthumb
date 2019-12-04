@@ -8,3 +8,12 @@ export async function getPlants () {
     return error
   }
 }
+
+export async function getPlant (id) {
+  try {
+    const resp = await HTTP_CLIENT.get(`/plant?id=${id}`)
+    return resp
+  } catch (error) {
+    return error
+  }
+}
