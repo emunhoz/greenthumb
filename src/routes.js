@@ -7,6 +7,7 @@ import SunLightPage from './pages/SunLight'
 import WaterPage from './pages/Water'
 import DogPage from './pages/Dogs'
 import PickPage from './pages/Pick'
+import DetailsPage from './pages/Details'
 
 const Routes = () => (
   <Router history={History}>
@@ -17,6 +18,7 @@ const Routes = () => (
         <Route exact path='/water' component={WaterPage} />
         <Route exact path='/dogs' component={DogPage} />
         <Route exact path='/pick' component={PickPage} />
+        <Route exact path='/:id' component={DetailsPage} />
         <Route path='*' component={() => <h1>Page not found</h1>} />
       </Switch>
     </ErrorBoundary>
