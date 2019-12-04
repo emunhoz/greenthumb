@@ -10,16 +10,18 @@ import { ReactComponent as NoSun } from '../../images/icons/grey/no-sun.svg'
 
 import { ReactComponent as Toxic } from '../../images/icons/grey/toxic.svg'
 
-export const toxic = <Toxic />
+import { ReactComponent as Pet } from '../../images/icons/grey/pet.svg'
 
-export const water = {
+const Water = {
   rarely: <OneDrop />,
   regularly: <TwoDrops />,
   daily: <ThreeDrops />
 }
 
-export const sun = {
+const Sun = {
   high: <HighSun />,
   low: <LowSun />,
   no: <NoSun />
 }
+
+export { Toxic, Pet, Water, Sun }

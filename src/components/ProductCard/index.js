@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import BtnLink from '../BtnLink'
-import { sun, water, toxic as Toxic } from '../SetIcon'
+import { Sun, Water, Toxic } from '../SetIcon'
 import * as S from './styles'
 
 const ProductCard = ({ items }) => (
@@ -11,8 +11,8 @@ const ProductCard = ({ items }) => (
     <S.Features>
       <S.Price>${items.price}</S.Price>
       <S.Icons>
-        {items.toxicity ? <Toxic /> : null} {sun[items.sun]}{' '}
-        {water[items.water]}
+        {items.toxicity ? <Toxic /> : null} {Sun[items.sun]}{' '}
+        {Water[items.water]}
       </S.Icons>
     </S.Features>
     <BtnLink shape='line' to={`/${items.id}`}>
