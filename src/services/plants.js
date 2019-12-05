@@ -1,8 +1,8 @@
 import HTTP_CLIENT from './api'
 
-export async function getPlants () {
+export async function getPlants (sun, water, pets) {
   try {
-    const resp = await HTTP_CLIENT.get('?sun=high&water=rarely&pets=false')
+    const resp = await HTTP_CLIENT.get(`?sun=${sun}&water=${water}&pets=${pets}`)
     return resp
   } catch (error) {
     return error
