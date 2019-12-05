@@ -1,6 +1,6 @@
 import React from 'react'
 import HomeLayout from '../../components/HomeLayout'
-import HomeIllustration from '../../images/illustrations/illustration-home.png'
+import HomeIllustration from '../../images/illustrations/illustration-home.webp'
 import { FadeInRight } from 'animate-css-styled-components'
 import * as S from './styles'
 
