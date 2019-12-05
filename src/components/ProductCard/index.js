@@ -4,9 +4,10 @@ import BtnLink from '../BtnLink'
 import { Sun, Water, Toxic } from '../SetIcon'
 import * as S from './styles'
 
-const ProductCard = ({ items }) => (
-  <S.ProductCard>
-    <S.Img src={items.url} alt={items.name} />
+const ProductCard = ({ items, delay }) => (
+  <S.ProductCard duration='1s' delay={delay}>
+    {console.log(delay)}
+    <S.Img loading='lazy' src={items.url} alt={items.name} />
     <S.Title>{items.name}</S.Title>
     <S.Features>
       <S.Price>${items.price}</S.Price>
@@ -22,7 +23,8 @@ const ProductCard = ({ items }) => (
 )
 
 ProductCard.propTypes = {
-  items: PropTypes.object
+  items: PropTypes.object,
+  delay: PropTypes.number
 }
 
 export default ProductCard

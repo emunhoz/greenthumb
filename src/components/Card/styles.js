@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import { FadeInUp } from 'animate-css-styled-components'
 
-export const Card = styled.div`
+export const Card = styled(FadeInUp)`
   background: var(--white);
   box-shadow: 0px 20px 34px rgba(0, 0, 0, 0.0758577);
   border-radius: 5px;
@@ -13,9 +14,13 @@ export const Card = styled.div`
   color: var(--gray-light);
   width: 100%;
   margin-bottom: 20px;
+  transition: 0.2s;
 
   display: inline-flex;
   align-items: center;
+
+  animation-duration: ${({ duration }) => duration};
+  animation-delay: ${({ delay }) => delay};
 
   svg {
     width: 42px;
@@ -28,6 +33,8 @@ export const Card = styled.div`
     background: ${({ color }) => color};
     font-weight: 600;
     color: var(--white);
+    transform: scale(1.05);
+    box-shadow: 0px 5px 6px rgba(0,0,0,0.1.5);
 
     svg {
       * {
