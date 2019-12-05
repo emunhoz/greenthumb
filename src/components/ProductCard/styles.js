@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { FadeInUp } from 'animate-css-styled-components'
 
-export const ProductCard = styled.div`
+export const ProductCard = styled(FadeInUp)`
   background: var(--white);
   box-shadow: 0px 28px 38px rgba(0, 0, 0, 0.0925754);
   border-radius: 5px;
@@ -8,6 +9,9 @@ export const ProductCard = styled.div`
   max-width: 268px;
   display: flex;
   flex-flow: column;
+
+  animation-duration: .5s;
+  animation-delay: ${({ delay }) => `.${delay}s`};
 `
 
 export const Img = styled.img`

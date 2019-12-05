@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import { FadeIn, FadeInLeft, FadeInRight } from 'animate-css-styled-components'
 
 export const Main = styled.main`
   grid-area: main;
@@ -12,7 +13,10 @@ export const Main = styled.main`
   `}
 `
 
-export const PlantInfo = styled.div`
+export const PlantInfo = styled(FadeInLeft)`
+  animation-duration: .5s;
+  animation-delay: 0.2s;
+
   ${media.greaterThan('medium')`
     max-width: 380px;
   `}
@@ -73,11 +77,14 @@ export const ListItem = styled.li`
   }
 `
 
-export const Contact = styled.div`
+export const Contact = styled(FadeInRight)`
   background: #f6f6f6;
   width: 100%;
   height: 512px;
   padding: 30px;
+
+  animation-duration: .5s;
+  animation-delay: 0.2s;
 
   ${media.greaterThan('medium')`
     width: 381px;
@@ -99,11 +106,14 @@ export const Description = styled.p`
   margin-bottom: 30px;
 `
 
-export const SuccessMessage = styled.div`
+export const SuccessMessage = styled(FadeIn)`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column;
+
+  animation-duration: .5s;
+  animation-delay: 0.2s;
 
   ${TitleForm} {
     margin-top: 15px;

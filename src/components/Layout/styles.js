@@ -8,8 +8,9 @@ export const Layout = styled.div`
       "main";
   grid-template-columns: 1fr;
   grid-template-rows: 80px 1fr;
+  /* align-items: center; */
   min-height: 100vh;
-  padding: 61px 0;
+  padding: 0 28px;
 
   ${media.greaterThan('medium')`
     grid-template-areas:
@@ -19,7 +20,6 @@ export const Layout = styled.div`
   `}
   grid-area: main;
   background: ${({ color }) => color};
-  padding: 0 28px;
 
   ${media.greaterThan('medium')`
     padding: 0;

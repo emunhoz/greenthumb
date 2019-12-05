@@ -18,7 +18,6 @@ export const WarningMessage = styled.p`
   margin-bottom: 47px;
   width: 100%;
 
-
   ${media.greaterThan('medium')`
     line-height: 39px;
     margin-bottom: 39px;
@@ -35,13 +34,7 @@ export const Wrapper = styled.div`
     display: flex;
     flex-flow: wrap;
     align-items: center;
-    justify-content: center;
-
-    div {
-      &:first-of-type {
-        margin-right: 30px;
-      }
-    }
+    justify-content: space-between;
   `}
 `
 
