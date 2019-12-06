@@ -1,7 +1,5 @@
 export const Types = {
-  SET_SUN: 'features/SET_SUN',
-  SET_WATER: 'features/SET_WATER',
-  SET_PETS: 'features/SET_PETS'
+  SET_FEATURE: 'features/SET_FEATURE'
 }
 
 // Reducer
@@ -9,29 +7,15 @@ export const Types = {
 const initialState = {
   sun: '',
   water: '',
-  pets: false
+  pets: null
 }
 
-// console.log(initialState, 'initialState')
-
 export default function reducer (state = initialState, action) {
-  console.log(state, 'statestatestatestate')
   switch (action.type) {
-    case Types.SET_SUN:
+    case Types.SET_FEATURE:
       return {
         ...state,
-        sun: action.payload.val
-      }
-    case Types.SET_WATER:
-      return {
-        ...state,
-        water: action.payload.val
-      }
-    case Types.SET_PETS:
-      console.log(action.payload.val)
-      return {
-        ...state,
-        pets: action.payload.val
+        [action.payload.field]: action.payload.value
       }
     default:
       return state
@@ -40,30 +24,12 @@ export default function reducer (state = initialState, action) {
 
 // Action Creators
 
-export function setSun (val) {
+export function setFeature ({ field, value }) {
   return {
-    type: Types.SET_SUN,
+    type: Types.SET_FEATURE,
     payload: {
-      val
-    }
-  }
-}
-
-export function setWater (val) {
-  return {
-    type: Types.SET_WATER,
-    payload: {
-      val
-    }
-  }
-}
-
-export function setPets (val) {
-  console.log(val, 'val')
-  return {
-    type: Types.SET_PETS,
-    payload: {
-      val
+      field,
+      value
     }
   }
 }
