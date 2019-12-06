@@ -1,6 +1,4 @@
-## React + Redux (Ducks) Starter template [![Netlify Status](https://api.netlify.com/api/v1/badges/bc5eae67-3ac3-43d7-a761-05d100119748/deploy-status)](https://app.netlify.com/sites/emunhoz-react-boilerplate/deploys) ![GitHub repo size](https://img.shields.io/github/repo-size/emunhoz/react_boilerplate?style=social)
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Greenthumb [![Netlify Status](https://api.netlify.com/api/v1/badges/3f8cb9cc-2d6e-4a96-8a43-6033a791d7bb/deploy-status)](https://app.netlify.com/sites/emunhoz-greenthumb/deploys) ![GitHub repo size](https://img.shields.io/github/repo-size/emunhoz/greenthumb?style=social)
 
 What's included?
 
@@ -13,14 +11,3 @@ What's included?
 - [x] persistState with `redux-persist`
 - [x] Native CSS variables with `createGlobalStyle`
 - [x] Axios
-
-Modules developed
-
-- [x] Navigation
-- [x] Login
-- [x] Error Boundary
-- [x] Private Routes
-
-** TO DO **
-
-- [ ] React testing library
