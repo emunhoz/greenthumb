@@ -1,12 +1,14 @@
 import styled from 'styled-components'
-import { ArrowRight } from 'styled-icons/feather/ArrowRight'
 
 export const Button = styled.button`
-  border: ${({ shape }) => shape === 'line' ? '1px solid var(--primary)' : 'none'};
-  background: ${({ shape }) => shape === 'line' ? 'var(--white)' : 'var(--primary)'};
-  color: ${({ shape }) => shape === 'line' ? 'var(--primary)' : 'var(--white)'};
+  border: ${({ shape }) =>
+    shape === 'line' ? '1px solid var(--primary)' : 'none'};
+  background: ${({ shape }) =>
+    shape === 'line' ? 'transparent' : 'var(--primary)'};
+  color: ${({ shape }) =>
+    shape === 'line' ? 'var(--primary)' : 'var(--white)'};
   box-sizing: border-box;
-  min-width: ${({ block }) => block ? '100%' : '170px'};
+  min-width: ${({ block }) => (block ? '100%' : '170px')};
   min-height: 50px;
   border-radius: 25px;
   font-size: 16px;
@@ -17,9 +19,12 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+  float: left;
 
   svg {
-    color: ${({ shape }) => shape === 'line' ? 'var(--primary)' : 'var(--white)'};
+    color: ${({ shape }) =>
+    shape === 'line' ? 'var(--primary)' : 'var(--white)'};
   }
 
   &:hover {
@@ -32,8 +37,10 @@ export const Button = styled.button`
   }
 `
 
-export const ArrowIcon = styled(ArrowRight)`
+export const Icon = styled.div`
   position: absolute;
-  height: 28px;
   left: 10px;
+  svg {
+    height: 28px;
+  }
 `
