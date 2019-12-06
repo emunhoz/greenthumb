@@ -5,8 +5,16 @@ import * as S from './styles'
 
 const BtnLink = props => (
   <S.BtnLink {...props}>
-    {props.icon === 'right' ? <S.Icon><ArrowRight /></S.Icon> : null}
-    {props.icon === 'left' ? <S.Icon><ArrowLeft /></S.Icon> : null}
+    {props.icon === 'right' ? (
+      <S.Icon>
+        <ArrowRight />
+      </S.Icon>
+    ) : null}
+    {props.icon === 'left' ? (
+      <S.Icon>
+        <ArrowLeft />
+      </S.Icon>
+    ) : null}
     {props.children}
   </S.BtnLink>
 )

@@ -1,6 +1,7 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { Link } from 'react-router-dom'
 
-export const Button = styled.button`
+const buttonStyle = css`
   border: ${({ shape }) =>
     shape === 'line' ? '1px solid var(--primary)' : 'none'};
   background: ${({ shape }) =>
@@ -32,9 +33,18 @@ export const Button = styled.button`
     cursor: pointer;
   }
 
-  &:disabled {
+  &:disabled,
+  &.disabled {
     opacity: 0.5;
   }
+`
+
+export const Button = styled.button`
+  ${buttonStyle}
+`
+
+export const BtnLink = styled(Link)`
+  ${buttonStyle}
 `
 
 export const Icon = styled.div`
