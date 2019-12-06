@@ -4,8 +4,8 @@ import media from 'styled-media-query'
 export const HomeLayout = styled.div`
   display: grid;
   grid-template-areas:
-      "aside"
-      "main";
+    'aside'
+    'main';
   grid-template-rows: 280px 1fr;
   min-height: 100vh;
   background: var(--background);
