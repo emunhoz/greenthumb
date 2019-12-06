@@ -2,8 +2,22 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import * as S from './styles'
 
-const Card = ({ icon: Icon, text, color, onClick, id, duration, delay }) => (
-  <S.Card color={color} onClick={onClick} id={id} duration={duration} delay={delay}>
+const Card = ({
+  icon: Icon,
+  text,
+  color,
+  onClick,
+  className,
+  duration,
+  delay
+}) => (
+  <S.Card
+    color={color}
+    onClick={onClick}
+    className={className}
+    duration={duration}
+    delay={delay}
+  >
     <Icon />
     <p>{text}</p>
   </S.Card>
@@ -12,10 +26,10 @@ const Card = ({ icon: Icon, text, color, onClick, id, duration, delay }) => (
 Card.propTypes = {
   icon: PropTypes.object,
   text: PropTypes.string,
-  id: PropTypes.string,
+  className: PropTypes.string,
   color: PropTypes.string,
   duration: PropTypes.string,
-  delay: PropTypes.string,
+  delay: PropTypes.number,
   onClick: PropTypes.func
 }
 

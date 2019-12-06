@@ -19,8 +19,8 @@ export const Card = styled(FadeInUp)`
   display: inline-flex;
   align-items: center;
 
-  animation-duration: ${({ duration }) => duration};
-  animation-delay: ${({ delay }) => delay};
+  animation-duration: 0.5s;
+  animation-delay: ${({ delay }) => `.${delay}s`};
 
   svg {
     width: 42px;
@@ -28,13 +28,14 @@ export const Card = styled(FadeInUp)`
     margin-right: 20px;
   }
 
-  &:hover {
+  &:hover,
+  &.active {
     cursor: pointer;
     background: ${({ color }) => color};
     font-weight: 600;
     color: var(--white);
     transform: scale(1.05);
-    box-shadow: 0px 5px 6px rgba(0,0,0,0.1.5);
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1.5);
 
     svg {
       * {
@@ -42,7 +43,6 @@ export const Card = styled(FadeInUp)`
       }
     }
   }
-
 
   ${media.greaterThan('medium')`
     max-width: 215px;
