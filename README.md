@@ -15,3 +15,4 @@ What's included?
 - [x] Native CSS variables with `createGlobalStyle`
 - [x] PWA 100% - Audits o/
 - [x] Axios
+- [x] Storybook with components
