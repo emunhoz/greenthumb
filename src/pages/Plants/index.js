@@ -37,10 +37,9 @@ const PlantsPage = ({ sun, water, pets }) => {
           </FadeInUp>
         </S.Wrapper>
         <S.WrapperCards>
-          {data.length &&
-            data.map((item, k) => (
-              <ProductCard items={item} key={k} delay={2 * k} />
-            ))}
+          {data.map((item, k) => (
+            <ProductCard items={item} key={k} delay={2 * k} />
+          ))}
         </S.WrapperCards>
       </S.Main>
     </Layout>

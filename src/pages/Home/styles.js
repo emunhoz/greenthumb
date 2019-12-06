@@ -5,6 +5,12 @@ export const Main = styled.main`
   grid-area: main;
   display: flex;
   align-items: center;
+
+  div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 `
 
 export const Img = styled.img`

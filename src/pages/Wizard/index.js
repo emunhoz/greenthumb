@@ -8,9 +8,8 @@ import SunLight from '../../components/Wizard/SunLight'
 import WaterStep from '../../components/Wizard/Water'
 import Pets from '../../components/Wizard/Pets'
 
-const WizardPage = ({ step }) => (
+const WizardPage = ({ step = 1 }) => (
   <Layout>
-    <p>{step} ahhhhhhhhh</p>
     {step === 1 && <SunLight />}
     {step === 2 && <WaterStep />}
     {step === 3 && <Pets />}

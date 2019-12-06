@@ -22,7 +22,7 @@ const HomePage = () => (
       </FadeInLeft>
     </S.Header>
     <S.Main>
-      <FadeInRight duration='0.5s' delay='.5s' style={{ height: '100%' }}>
+      <FadeInRight duration='0.5s' delay='.5s'>
         <S.Img src={HomeIllustration} alt='Plants' />
       </FadeInRight>
     </S.Main>
