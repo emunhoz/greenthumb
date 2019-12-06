@@ -6,7 +6,7 @@ import { RHFInput } from 'react-hook-form-input'
 import { ErrorWarning } from 'styled-icons/remix-fill/ErrorWarning'
 import Input from '../../Input'
 import Label from '../../Label'
-import Button from '../../Button'
+import { Button } from '../../Button'
 
 const OrderForm = ({ setSuccess }) => {
   const { register, handleSubmit, setValue, errors } = useForm({

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import BtnLink from '../BtnLink'
+import BtnLink from '../Button/BtnLink'
 import { Sun, Water, Toxic } from '../SetIcon'
 import * as S from './styles'
 

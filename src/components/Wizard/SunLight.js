@@ -9,8 +9,7 @@ import { setStep } from '../../store/ducks/wizard'
 
 import StepMessage from '../StepMessage'
 import Card from '../Card'
-import BtnLink from '../BtnLink'
-import Button from '../Button'
+import { Button, BtnLink } from '../Button'
 
 import { ReactComponent as HighSunlight } from '../../images/icons/coral/high-sun.svg'
 import { ReactComponent as LowSunlight } from '../../images/icons/coral/low-sun.svg'

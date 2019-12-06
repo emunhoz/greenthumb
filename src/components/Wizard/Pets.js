@@ -9,8 +9,7 @@ import { setStep } from '../../store/ducks/wizard'
 
 import StepMessage from '../StepMessage'
 import Card from '../Card'
-import BtnLink from '../BtnLink'
-import Button from '../Button'
+import { Button, BtnLink } from '../Button'
 
 import { ReactComponent as Pet } from '../../images/icons/coral/pet.svg'
 import { ReactComponent as NoAnswer } from '../../images/icons/coral/no-answer.svg'
@@ -62,7 +61,8 @@ const Pets = ({ pets, setFeature, setStep }) => (
         </Button>
         <BtnLink
           to='/plants'
-          onClick={e => !pets && e.preventDefault()}
+          className={pets === null ? 'disabled' : null}
+          onClick={e => pets === null && e.preventDefault()}
           icon='right'
           shape='line'
         >

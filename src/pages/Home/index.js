@@ -3,7 +3,7 @@ import HomeLayout from '../../components/HomeLayout'
 import HomeIllustration from '../../images/illustrations/illustration-home.webp'
 import { FadeInRight, FadeInLeft } from 'animate-css-styled-components'
 import LogoGreenThumb from '../../images/logo-greenthumb.svg'
-import BtnLink from '../../components/BtnLink'
+import BtnLink from '../../components/Button/BtnLink'
 import * as S from './styles'
 
 const HomePage = () => (

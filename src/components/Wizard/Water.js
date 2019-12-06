@@ -13,7 +13,7 @@ import { ReactComponent as TwoDrops } from '../../images/icons/green/two-drops.s
 import { ReactComponent as ThreeDrops } from '../../images/icons/green/three-drops.svg'
 import Water from '../../images/illustrations/wateringcan.png'
 
-import Button from '../Button'
+import { Button } from '../Button'
 
 import { Main, Wrapper, Navs } from './styles'
 
@@ -56,7 +56,12 @@ const WaterStep = ({ water, setFeature, setStep }) => (
         <Button onClick={() => setStep(1)} icon='left' shape='line'>
           previous
         </Button>
-        <Button onClick={() => setStep(3)} icon='right' shape='line'>
+        <Button
+          disabled={!water}
+          onClick={() => setStep(3)}
+          icon='right'
+          shape='line'
+        >
           next
         </Button>
       </Navs>
