@@ -8,19 +8,19 @@ import Input from '../../Input'
 import Label from '../../Label'
 import { Button } from '../../Button'
 
-const OrderForm = ({ setSuccess }) => {
+const OrderForm = ({ onSubmitForm }) => {
   const { register, handleSubmit, setValue, errors } = useForm({
     mode: 'onChange'
   })
   const emailPattern = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i
 
   const onSubmit = data => {
-    setSuccess(true)
+    onSubmitForm(data)
     console.log(data)
   }
 
   return (
-    <S.Form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <Label name='Name' className={errors.name ? 'error' : null} />
       <RHFInput
         as={<Input />}
@@ -51,15 +51,17 @@ const OrderForm = ({ setSuccess }) => {
         </p>
       )}
 
-      <Button type='submit' shape='line'>
-        send
-      </Button>
-    </S.Form>
+      <S.BtnAction>
+        <Button type='submit' shape='line'>
+          send
+        </Button>
+      </S.BtnAction>
+    </form>
   )
 }
 
 OrderForm.propTypes = {
-  setSuccess: PropTypes.func
+  onSubmitForm: PropTypes.func
 }
 
 export default OrderForm
