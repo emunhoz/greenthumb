@@ -9,17 +9,20 @@ import * as S from './styles'
 
 const DetailsPage = ({ match }) => {
   const [data, setData] = React.useState([])
-  const { name, price, sun, toxicity, url, water } = data
+  const { name, price, sun, toxicity, url, water } = data || {}
   const [success, setSuccess] = React.useState(false)
   const { id } = match.params
 
-  React.useEffect(() => {
-    async function fecthData () {
-      const resp = await getPlant(id)
-      setData(resp.data)
-    }
-    fecthData()
-  }, [id])
+  React.useEffect(
+    () => {
+      async function fecthData () {
+        const resp = await getPlant(id)
+        setData(resp.data)
+      }
+      fecthData()
+    },
+    [id]
+  )
 
   return (
     <Layout color='var(--white)'>
@@ -38,12 +41,14 @@ const DetailsPage = ({ match }) => {
             <S.ListItem>
               {toxicity && (
                 <>
-                  <Toxic /><strong>Beware!</strong>Toxic for pets
+                  <Toxic />
+                  <strong>Beware!</strong>Toxic for pets
                 </>
               )}
               {!toxicity && (
                 <>
-                  <Pet />Non-toxic for pets
+                  <Pet />
+                  Non-toxic for pets
                 </>
               )}
             </S.ListItem>
@@ -54,8 +59,8 @@ const DetailsPage = ({ match }) => {
             <>
               <S.TitleForm>Nice pick!</S.TitleForm>
               <S.Description>
-                Tell us your name and e-mail and we will get in touch regarding your
-                order ;)
+                Tell us your name and e-mail and we will get in touch regarding
+                your order ;)
               </S.Description>
               <OrderForm setSuccess={setSuccess} />
             </>
