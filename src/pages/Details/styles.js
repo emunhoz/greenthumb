@@ -1,11 +1,17 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import { FadeIn, FadeInLeft, FadeInRight } from 'animate-css-styled-components'
+import {
+  FadeIn,
+  FadeInLeft,
+  FadeInRight,
+  FadeInUp
+} from 'animate-css-styled-components'
 
 export const Main = styled.main`
   grid-area: main;
   display: grid;
   grid-template-columns: 1fr;
+  align-items: center;
 
   ${media.greaterThan('medium')`
     grid-template-columns: 1fr 1fr;
@@ -14,7 +20,7 @@ export const Main = styled.main`
 `
 
 export const PlantInfo = styled(FadeInLeft)`
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-delay: 0.2s;
 
   ${media.greaterThan('medium')`
@@ -64,7 +70,7 @@ export const ListItem = styled.li`
   font-weight: 300;
   font-size: 16px;
   line-height: 20px;
-  color: #6E6E6E;
+  color: #6e6e6e;
   margin-bottom: 17px;
   svg {
     width: 28px;
@@ -83,7 +89,7 @@ export const Contact = styled(FadeInRight)`
   height: 512px;
   padding: 30px;
 
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-delay: 0.2s;
 
   ${media.greaterThan('medium')`
@@ -112,7 +118,7 @@ export const SuccessMessage = styled(FadeIn)`
   justify-content: center;
   flex-flow: column;
 
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-delay: 0.2s;
 
   ${TitleForm} {
@@ -123,5 +129,24 @@ export const SuccessMessage = styled(FadeIn)`
     text-align: center;
     margin-bottom: 36px;
     max-width: 265px;
+  }
+`
+
+export const ErrorMessage = styled(FadeInUp)`
+  background: #ff6c6c;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+
+  animation-duration: 0.5s;
+  animation-delay: 0.2s;
+
+  svg {
+    height: 36px;
+    margin-right: 20px;
   }
 `
