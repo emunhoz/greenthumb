@@ -7,7 +7,11 @@ What's included?
 - [x] React Router
 - [x] Redux
 - [x] Ducks pattern 🦆🦆🦆
-- [x] Styled components with ThemeProvider 💅💅💅
+- [x] Styled components 💅💅💅
+- [x] Animations with `animate-css-styled-components`
+- [x] `react-hook-form` to validate forms
 - [x] persistState with `redux-persist`
+- [x] `styled-media-query` to responsive views
 - [x] Native CSS variables with `createGlobalStyle`
+- [x] PWA 100% - Audits o/
 - [x] Axios
