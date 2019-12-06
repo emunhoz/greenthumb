@@ -22,8 +22,6 @@ export default function reducer (state = initialState, action) {
 // Action Creators
 
 export function setStep (step) {
-  console.log(initialState, 'initialState')
-  console.log(step, 'steeeeep novo poha')
   return {
     type: Types.SET_STEP,
     payload: {

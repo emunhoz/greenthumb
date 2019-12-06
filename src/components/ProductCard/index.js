@@ -6,7 +6,6 @@ import * as S from './styles'
 
 const ProductCard = ({ items, delay }) => (
   <S.ProductCard duration='1s' delay={delay}>
-    {console.log(delay)}
     <S.Img loading='lazy' src={items.url} alt={items.name} />
     <S.Title>{items.name}</S.Title>
     <S.Features>
