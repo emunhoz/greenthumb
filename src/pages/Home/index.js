@@ -16,7 +16,7 @@ const HomePage = () => (
         <S.Title>Find your next green friend</S.Title>
       </FadeInLeft>
       <FadeInLeft duration='0.5s' delay='.7s'>
-        <BtnLink icon='right' to='/sunlight'>
+        <BtnLink icon='right' to='/wizard'>
           start quizz
         </BtnLink>
       </FadeInLeft>
