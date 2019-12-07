@@ -35,6 +35,7 @@
     "p": "prettier --write 'src/**/*.js'",
     "p:w": "onchange 'src/**/*.js' -- prettier --write {{changed}}",
     "storybook": "start-storybook -p 6006",
+    "cypress:open": "cypress open",
     "build-storybook": "build-storybook"
   },
   "eslintConfig": {
@@ -68,9 +69,11 @@
     "@types/jest": "^24.0.23",
     "babel-loader": "^8.0.6",
     "babel-plugin-inline-react-svg": "^1.1.0",
+    "cypress": "^3.7.0",
     "eslint": "^6.7.1",
     "eslint-config-prettier": "^6.7.0",
     "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-cypress": "^2.7.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-prettier": "^3.1.1",

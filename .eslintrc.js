@@ -4,7 +4,11 @@ module.exports = {
     es6: true,
     jest: true
   },
-  extends: ['standard', 'plugin:react/recommended'],
+  extends: [
+    'standard',
+    'plugin:react/recommended',
+    'plugin:cypress/recommended'
+  ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
@@ -16,6 +20,6 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  plugins: ['react'],
+  plugins: ['react', 'cypress'],
   rules: {}
 }
