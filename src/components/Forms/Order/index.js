@@ -24,6 +24,7 @@ const OrderForm = ({ onSubmitForm }) => {
       <Label id='name' name='Name' className={errors.name ? 'error' : null} />
       <RHFInput
         as={<Input id='name' name='name' />}
+        name='name'
         className={errors.name ? 'error' : null}
         placeholder='Crazy Plant Person'
         setValue={setValue}
@@ -43,6 +44,7 @@ const OrderForm = ({ onSubmitForm }) => {
       <RHFInput
         as={<Input id='email' name='email' />}
         placeholder='plantperson@email.com'
+        name='email'
         setValue={setValue}
         className={errors.email ? 'error' : null}
         register={register({ required: true, pattern: emailPattern })}
