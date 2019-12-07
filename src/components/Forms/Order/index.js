@@ -21,11 +21,10 @@ const OrderForm = ({ onSubmitForm }) => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <Label name='Name' className={errors.name ? 'error' : null} />
+      <Label id='name' name='Name' className={errors.name ? 'error' : null} />
       <RHFInput
-        as={<Input />}
+        as={<Input id='name' name='name' />}
         className={errors.name ? 'error' : null}
-        name='name'
         placeholder='Crazy Plant Person'
         setValue={setValue}
         register={register({ required: true, minLength: 2 })}
@@ -36,10 +35,13 @@ const OrderForm = ({ onSubmitForm }) => {
         </p>
       )}
 
-      <Label name='E-mail' className={errors.email ? 'error' : null} />
+      <Label
+        id='email'
+        name='E-mail'
+        className={errors.email ? 'error' : null}
+      />
       <RHFInput
-        as={<Input />}
-        name='email'
+        as={<Input id='email' name='email' />}
         placeholder='plantperson@email.com'
         setValue={setValue}
         className={errors.email ? 'error' : null}
