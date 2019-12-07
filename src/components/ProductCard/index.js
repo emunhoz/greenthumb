@@ -4,18 +4,20 @@ import BtnLink from '../Button/BtnLink'
 import { Sun, Water, Toxic } from '../SetIcon'
 import * as S from './styles'
 
-const ProductCard = ({ items, delay }) => (
+const ProductCard = ({
+  items: { url, name, price, toxicity, sun, water, id },
+  delay
+}) => (
   <S.ProductCard duration='1s' delay={delay}>
-    <S.Img loading='lazy' src={items.url} alt={items.name} />
-    <S.Title>{items.name}</S.Title>
+    <S.Img loading='lazy' src={url} alt={name} />
+    <S.Title>{name}</S.Title>
     <S.Features>
-      <S.Price>${items.price}</S.Price>
+      <S.Price>${price}</S.Price>
       <S.Icons>
-        {items.toxicity ? <Toxic /> : null} {Sun[items.sun]}{' '}
-        {Water[items.water]}
+        {toxicity ? <Toxic /> : null} {Sun[sun]} {Water[water]}
       </S.Icons>
     </S.Features>
-    <BtnLink shape='line' to={`/${items.id}`}>
+    <BtnLink shape='line' to={`/${id}`}>
       buy now
     </BtnLink>
   </S.ProductCard>
