@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '.'
+import { Button } from '.'
 
 export default {
   title: 'Button'
@@ -8,13 +8,15 @@ export default {
 export const primary = () => (
   <>
     <Button>label</Button>
-    <Button icon>label</Button>
+    <Button icon='right'>label</Button>
   </>
 )
 
 export const line = () => (
   <>
     <Button shape='line'>label</Button>
-    <Button icon shape='line'>label</Button>
+    <Button icon='right' shape='line'>
+      label
+    </Button>
   </>
 )

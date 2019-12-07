@@ -1,6 +1,7 @@
 import React from 'react'
 import ProductCard from '.'
 import styled from 'styled-components'
+import { BrowserRouter } from 'react-router-dom'
 
 export default {
   title: 'ProductCard'
@@ -21,29 +22,15 @@ const data = [
     url: 'https://front-static-recruitment.s3.amazonaws.com/succulent-bowl.jpg',
     price: 10,
     toxicity: false
-  },
-  {
-    id: 2,
-    name: 'Succulent Bowl',
-    sun: 'high',
-    water: 'rarely',
-    url: 'https://front-static-recruitment.s3.amazonaws.com/succulent-bowl.jpg',
-    price: 20,
-    toxicity: false
-  },
-  {
-    id: 3,
-    name: 'Succulent Bowl',
-    sun: 'high',
-    water: 'rarely',
-    url: 'https://front-static-recruitment.s3.amazonaws.com/succulent-bowl.jpg',
-    price: 30,
-    toxicity: true
   }
 ]
 
 export const primary = () => (
-  <Background>
-    <ProductCard items={data} />
-  </Background>
+  <BrowserRouter>
+    <Background>
+      {data.map((item, k) => (
+        <ProductCard items={item} key={k} delay={2 * k} />
+      ))}
+    </Background>
+  </BrowserRouter>
 )
