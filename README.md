@@ -1,4 +1,4 @@
-## Greenthumb [![Netlify Status](https://api.netlify.com/api/v1/badges/3f8cb9cc-2d6e-4a96-8a43-6033a791d7bb/deploy-status)](https://app.netlify.com/sites/emunhoz-greenthumb/deploys) ![GitHub repo size](https://img.shields.io/github/repo-size/emunhoz/greenthumb?style=sociall)
+## Greenthumb [![Netlify Status](https://api.netlify.com/api/v1/badges/3f8cb9cc-2d6e-4a96-8a43-6033a791d7bb/deploy-status)](https://app.netlify.com/sites/emunhoz-greenthumb/deploys) ![GitHub repo size](https://img.shields.io/github/repo-size/emunhoz/greenthumb?style=social)
 
 #### About this app
 - At the begining I setup Prettier, ESLint and EditorConfig code patterns
