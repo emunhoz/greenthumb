@@ -21,7 +21,6 @@ const buttonStyle = css`
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  float: left;
 
   svg {
     color: ${({ shape }) =>
@@ -43,13 +42,7 @@ export const Button = styled.button`
   ${buttonStyle}
 `
 
-export const BtnLink = styled(Link)`
-  ${buttonStyle}
-`
-
 export const Icon = styled.div`
-  position: absolute;
-  left: 10px;
   svg {
     height: 28px;
   }

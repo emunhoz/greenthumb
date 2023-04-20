@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Layout from '../../components/Layout'
 import { getPlant, postPlant } from '../../services/plants'
@@ -9,22 +9,31 @@ import { CommentError } from 'styled-icons/boxicons-solid/CommentError'
 import * as S from './styles'
 
 const DetailsPage = ({ match }) => {
-  const [data, setData] = React.useState([])
-  const { name, price, sun, toxicity, url, water } = data || {}
-  const [success, setSuccess] = React.useState(false)
-  const [error, setError] = React.useState(false)
+  // const [data, setData] = useState([])
+  // const { name, price, sun, toxicity, url, water } = data || {}
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState(false)
   const { id } = match.params
 
-  React.useEffect(
-    () => {
-      async function fecthData () {
-        const resp = await getPlant(id)
-        setData(resp.data)
-      }
-      fecthData()
-    },
-    [id]
-  )
+  // useEffect(
+  //   () => {
+  //     async function fecthData () {
+  //       const resp = await getPlant(id)
+  //       setData(resp.data)
+  //     }
+  //     fecthData()
+  //   },
+  //   [id]
+  // )
+  const data = {
+    url: 'https://thumbs.dreamstime.com/b/yucca-potted-plant-11663745.jpg',
+    name: 'Plant 1',
+    price: '1,23',
+    toxicity: true,
+    sun: 'high',
+    water: 'regularly',
+    id: '1'
+  }
 
   const onSubmitForm = async data => {
     const resp = await postPlant()
@@ -33,30 +42,32 @@ const DetailsPage = ({ match }) => {
     if (resp.status !== 200) return setError(true)
   }
 
+  console.log(Sun[data.sun], 'asdasdasd')
+
   return (
     <Layout color='var(--white)'>
       <S.Main>
         <S.PlantInfo>
-          <S.Title>{name}</S.Title>
-          <S.Price>${price}</S.Price>
-          <S.Img src={url} alt={name} />
+          <S.Title>{data.name}</S.Title>
+          <S.Price>${data.price}</S.Price>
+          <S.Img src={data.url} alt={data.name} />
           <S.List>
             <S.ListItem>
-              {Sun[sun]} {sun} sunlight
+              <img src={Sun[data.sun]} /> {data.sun} sunlight
             </S.ListItem>
             <S.ListItem>
-              {Water[water]} Water {water}
+              <img src={Water[data.water]} /> Water {data.water}
             </S.ListItem>
             <S.ListItem>
-              {toxicity && (
+              {data.toxicity && (
                 <>
-                  <Toxic />
+                  <img src={Toxic} />
                   <strong>Beware!</strong>Toxic for pets
                 </>
               )}
-              {!toxicity && (
+              {!data.toxicity && (
                 <>
-                  <Pet />
+                  <img src={Pet} />
                   Non-toxic for pets
                 </>
               )}

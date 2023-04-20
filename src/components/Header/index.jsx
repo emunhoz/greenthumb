@@ -1,4 +1,3 @@
-import React from 'react'
 import * as S from './styled'
 import LogoGreenThumbDesktop from '../../images/logo-desktop.svg'
 import LogoGreenThumb from '../../images/logo-greenthumb.svg'

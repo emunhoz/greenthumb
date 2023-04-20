@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 
 import { connect } from 'react-redux'
@@ -12,18 +11,28 @@ import * as S from './styles'
 import { FadeInUp } from 'animate-css-styled-components'
 
 const PlantsPage = ({ sun, water, pets }) => {
-  const [data, setData] = React.useState([])
+  // const [data, setData] = React.useState([])
 
-  React.useEffect(
-    () => {
-      async function fecthData () {
-        const resp = await getPlants(sun, water, pets)
-        setData(resp.data)
-      }
-      fecthData()
-    },
-    [sun, water, pets]
-  )
+  // React.useEffect(
+  //   () => {
+  //     async function fecthData () {
+  //       const resp = await getPlants(sun, water, pets)
+  //       setData(resp.data)
+  //     }
+  //     fecthData()
+  //   },
+  //   [sun, water, pets]
+  // )
+
+  const data = Array(5).fill({
+    url: 'https://thumbs.dreamstime.com/b/yucca-potted-plant-11663745.jpg',
+    name: 'Plant 1',
+    price: 'R$ 1,23',
+    toxicity: true,
+    sun: 'high',
+    water: 'regularly',
+    id: '1'
+  })
 
   return (
     <Layout>
@@ -37,7 +46,7 @@ const PlantsPage = ({ sun, water, pets }) => {
           </FadeInUp>
         </S.Wrapper>
         <S.WrapperCards>
-          {data.map((item, k) => (
+          {data?.map((item, k) => (
             <ProductCard items={item} key={k} delay={2 * k} />
           ))}
         </S.WrapperCards>

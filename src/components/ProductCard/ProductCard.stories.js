@@ -1,4 +1,3 @@
-import React from 'react'
 import ProductCard from '.'
 import styled from 'styled-components'
 import { BrowserRouter } from 'react-router-dom'

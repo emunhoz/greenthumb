@@ -1,6 +1,6 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-import BtnLink from '../Button/BtnLink'
+import Button from '../Button/Button'
+import { Link } from 'react-router-dom'
 import { Sun, Water, Toxic } from '../SetIcon'
 import * as S from './styles'
 
@@ -9,17 +9,19 @@ const ProductCard = ({
   delay
 }) => (
   <S.ProductCard duration='1s' delay={delay}>
-    <S.Img loading='lazy' src={url} alt={name} />
+    <img loading='lazy' src={url} alt={name} />
     <S.Title>{name}</S.Title>
     <S.Features>
       <S.Price>${price}</S.Price>
       <S.Icons>
-        {toxicity ? <Toxic /> : null} {Sun[sun]} {Water[water]}
+        {toxicity && <img src={Toxic} />} <img src={Sun[sun]} /> <img src={Water[water]} />
       </S.Icons>
     </S.Features>
-    <BtnLink shape='line' to={`/${id}`}>
-      buy now
-    </BtnLink>
+    <Link to={`/${id}`}>
+      <Button shape='line'>
+        buy now
+      </Button>
+    </Link>
   </S.ProductCard>
 )
 

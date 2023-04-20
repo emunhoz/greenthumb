@@ -1,4 +1,3 @@
-import React from 'react'
 import Input from '.'
 import Label from '../Label'
 import styled from 'styled-components'

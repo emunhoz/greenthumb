@@ -22,7 +22,7 @@ export const Card = styled(FadeInUp)`
   animation-duration: 0.5s;
   animation-delay: ${({ delay }) => `.${delay}s`};
 
-  svg {
+  img {
     width: 42px;
     height: 42px;
     margin-right: 20px;
@@ -37,10 +37,8 @@ export const Card = styled(FadeInUp)`
     transform: scale(1.05);
     box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1.5);
 
-    svg {
-      * {
-        fill: var(--white);
-      }
+    img {
+      filter: brightness(0) invert(1);
     }
   }
 
@@ -52,7 +50,7 @@ export const Card = styled(FadeInUp)`
     padding: 29px 0;
     color: var(--text);
 
-    svg {
+    img {
       width: 100%;
       height: 68px;
       margin-bottom: 22px;

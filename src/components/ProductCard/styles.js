@@ -14,10 +14,6 @@ export const ProductCard = styled(FadeInUp)`
   animation-delay: ${({ delay }) => `.${delay}s`};
 `
 
-export const Img = styled.img`
-  max-height: 168px;
-`
-
 export const Title = styled.h3`
   color: var(--primary);
   font-weight: 600;
@@ -41,7 +37,7 @@ export const Price = styled.span`
 
 export const Icons = styled.span`
   display: flex;
-  svg {
+  img {
     height: 23px;
     width: 23px;
     margin-right: 5px;

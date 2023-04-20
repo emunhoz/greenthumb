@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 
 import { connect } from 'react-redux'
@@ -9,10 +8,11 @@ import { setStep } from '../../store/ducks/wizard'
 
 import StepMessage from '../StepMessage'
 import Card from '../Card'
-import { Button, BtnLink } from '../Button'
+import { Button } from '../Button'
+import { Link } from 'react-router-dom'
 
-import { ReactComponent as Pet } from '../../images/icons/coral/pet.svg'
-import { ReactComponent as NoAnswer } from '../../images/icons/coral/no-answer.svg'
+import Pet from '../../images/icons/coral/pet.svg'
+import NoAnswer from '../../images/icons/coral/no-answer.svg'
 import Dog from '../../images/illustrations/dog.png'
 
 import { FadeInUp } from 'animate-css-styled-components'
@@ -59,15 +59,17 @@ const Pets = ({ pets, setFeature, setStep }) => (
         <Button onClick={() => setStep(2)} icon='left' shape='line'>
           previous
         </Button>
-        <BtnLink
-          to='/plants'
-          className={pets === null ? 'disabled' : null}
-          onClick={e => pets === null && e.preventDefault()}
-          icon='right'
-          shape='line'
-        >
-          finish
-        </BtnLink>
+        
+        <Link to='/plants'>
+          <Button
+            className={pets === null ? 'disabled' : null}
+            onClick={e => pets === null && e.preventDefault()}
+            icon='right'
+            shape='line'
+          >
+            finish
+          </Button>
+        </Link>
       </Navs>
     </WrapperDogs>
   </Main>

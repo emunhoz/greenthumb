@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 
 import { connect } from 'react-redux'
@@ -9,12 +8,15 @@ import { setStep } from '../../store/ducks/wizard'
 
 import StepMessage from '../StepMessage'
 import Card from '../Card'
-import { Button, BtnLink } from '../Button'
+import { Button } from '../Button'
+import { Link } from 'react-router-dom'
 
-import { ReactComponent as HighSunlight } from '../../images/icons/coral/high-sun.svg'
-import { ReactComponent as LowSunlight } from '../../images/icons/coral/low-sun.svg'
-import { ReactComponent as NoAnswer } from '../../images/icons/coral/no-answer.svg'
+import HighSunlight from '../../images/icons/coral/high-sun.svg'
+import LowSunlight from '../../images/icons/coral/low-sun.svg'
+import NoAnswer from '../../images/icons/coral/no-answer.svg'
 import Sun from '../../images/illustrations/sun.png'
+
+console.log(Sun, 'Sun')
 
 import { Main, Wrapper, Navs } from './styles'
 
@@ -42,7 +44,7 @@ const SunLight = ({ sun, setFeature, setStep }) => (
       First, set the amount of <strong>sunlight</strong> your plant will get.
     </StepMessage>
     <Wrapper>
-      {cards.map((item, k) => (
+      {cards?.map((item, k) => (
         <Card
           key={k}
           className={item.value === sun ? 'active' : null}
@@ -54,14 +56,15 @@ const SunLight = ({ sun, setFeature, setStep }) => (
         />
       ))}
       <Navs>
-        <BtnLink to='/' icon='left' shape='line' onClick={() => setStep(1)}>
-          home
-        </BtnLink>
+        <Link to='/'>
+          <Button icon='left' shape='line' onClick={() => setStep(1)}>
+            home
+          </Button>
+        </Link>
         <Button
           disabled={!sun}
           onClick={() => setStep(2)}
           icon='right'
-          shape='line'
         >
           next
         </Button>

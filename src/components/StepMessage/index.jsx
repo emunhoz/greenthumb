@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import * as S from './styles'
 import { FadeInUp } from 'animate-css-styled-components'

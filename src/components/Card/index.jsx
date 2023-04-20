@@ -1,9 +1,8 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import * as S from './styles'
 
 const Card = ({
-  icon: Icon,
+  icon,
   text,
   color,
   onClick,
@@ -18,13 +17,13 @@ const Card = ({
     duration={duration}
     delay={delay}
   >
-    <Icon />
+    <img src={icon} alt={text} width={78} height={70} />
     <p>{text}</p>
   </S.Card>
 )
 
 Card.propTypes = {
-  icon: PropTypes.object,
+  icon: PropTypes.string,
   text: PropTypes.string,
   className: PropTypes.string,
   color: PropTypes.string,

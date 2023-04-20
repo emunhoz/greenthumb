@@ -72,7 +72,7 @@ export const ListItem = styled.li`
   line-height: 20px;
   color: #6e6e6e;
   margin-bottom: 17px;
-  svg {
+  img {
     width: 28px;
     height: 28px;
     margin-right: 13px;
@@ -145,7 +145,7 @@ export const ErrorMessage = styled(FadeInUp)`
   animation-duration: 0.5s;
   animation-delay: 0.2s;
 
-  svg {
+  img {
     height: 36px;
     margin-right: 20px;
   }

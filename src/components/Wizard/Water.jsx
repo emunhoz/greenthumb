@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 
 import { connect } from 'react-redux'
@@ -8,9 +7,9 @@ import { setStep } from '../../store/ducks/wizard'
 
 import StepMessage from '../StepMessage'
 import Card from '../Card'
-import { ReactComponent as OneDrops } from '../../images/icons/green/one-drop.svg'
-import { ReactComponent as TwoDrops } from '../../images/icons/green/two-drops.svg'
-import { ReactComponent as ThreeDrops } from '../../images/icons/green/three-drops.svg'
+import OneDrops from '../../images/icons/green/one-drop.svg'
+import TwoDrops from '../../images/icons/green/two-drops.svg'
+import ThreeDrops from '../../images/icons/green/three-drops.svg'
 import Water from '../../images/illustrations/wateringcan.png'
 
 import { Button } from '../Button'

@@ -1,9 +1,9 @@
-import React from 'react'
 import HomeLayout from '../../components/HomeLayout'
 import HomeIllustration from '../../images/illustrations/illustration-home.webp'
 import { FadeInRight, FadeInLeft } from 'animate-css-styled-components'
 import LogoGreenThumb from '../../images/logo-greenthumb.svg'
-import BtnLink from '../../components/Button/BtnLink'
+import Button from '../../components/Button/Button'
+import { Link } from 'react-router-dom'
 import * as S from './styles'
 
 const HomePage = () => (
@@ -16,9 +16,11 @@ const HomePage = () => (
         <S.Title>Find your next green friend</S.Title>
       </FadeInLeft>
       <FadeInLeft duration='0.5s' delay='.7s'>
-        <BtnLink icon='right' to='/wizard'>
-          start quizz
-        </BtnLink>
+        <Link to="/wizard">
+          <Button icon='right'>
+            start quizz
+          </Button>
+        </Link>
       </FadeInLeft>
     </S.Header>
     <S.Main>
