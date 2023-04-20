@@ -55,7 +55,7 @@ export const WrapperCards = styled.div`
 
   > div {
     min-width: 268px;
-    // margin-right: 30px;
+    margin-right: 30px;
     &:last-child {
       margin-right: 0;
     }

@@ -47,7 +47,8 @@
     "jest-localstorage-mock": "^2.4.0",
     "lint-staged": "^9.4.3",
     "storybook": "^7.0.6",
-    "vite": "^4.2.0"
+    "vite": "^4.2.0",
+    "typescript": "^4.9.3"
   },
   "husky": {
     "hooks": {
