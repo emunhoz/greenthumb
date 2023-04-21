@@ -5,7 +5,6 @@ import { getPlant, postPlant } from '../../services/plants'
 import OrderForm from '../../components/Forms/Order'
 import { Sun, Water, Toxic, Pet } from '../../components/SetIcon'
 import Envelop from '../../images/illustrations/envelop.png'
-import { CommentError } from 'styled-icons/boxicons-solid/CommentError'
 import * as S from './styles'
 
 const DetailsPage = ({ match }) => {
@@ -77,7 +76,6 @@ const DetailsPage = ({ match }) => {
         <S.Contact>
           {error && (
             <S.ErrorMessage>
-              <CommentError />
               <p>Something wrong :(</p>
             </S.ErrorMessage>
           )}

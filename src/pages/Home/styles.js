@@ -10,19 +10,12 @@ export const Main = styled.main`
     height: 100%;
     display: flex;
     align-items: center;
+    width: 100%;
   }
 `
 
 export const Img = styled.img`
   width: 100%;
-  min-width: 516px;
-  position: fixed;
-
-  ${media.greaterThan('medium')`
-    width: 100%;
-    max-width: 779px;
-    position: inherit;
-  `}
 `
 
 export const Header = styled.aside`

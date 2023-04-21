@@ -39,39 +39,15 @@ export const Wrapper = styled.div`
 `
 
 export const Navs = styled.div`
-  display: flex;
-  flex-flow: column;
-  align-items: center;
+  display: grid;
+  grid-gap: 2.5em;
+  justify-content: center;
   margin-top: 37px;
 
-  a,
-  button {
-    margin-bottom: 31px;
-
-    &:first-child {
-      background: var(--primary);
-      color: var(--white);
-      svg {
-        color: var(--white);
-      }
-    }
-  }
-
   ${media.greaterThan('medium')`
-    margin-top: 47px;
+    display: flex;
     justify-content: space-between;
-    flex-flow: wrap;
     width: 100%;
-
-    a, button {
-      &:first-child {
-        background: inherit;
-        color: var(--primary);
-        svg {
-          color: var(--primary);
-        }
-      }
-    }
   `}
 `
 

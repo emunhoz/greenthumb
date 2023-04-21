@@ -50,11 +50,7 @@ export const Price = styled.div`
 export const Img = styled.img`
   margin: 0 auto;
   display: block;
-
-  ${media.greaterThan('medium')`
-    width: auto;
-    margin: 0;
-  `}
+  width: 100%;
 `
 
 export const List = styled.ul`

@@ -9,10 +9,6 @@ export const StepMessage = styled.div`
 
 export const Img = styled.img`
   margin-bottom: 21px;
-
-  ${media.greaterThan('medium')`
-    margin-bottom: 30px;
-  `}
 `
 
 export const Description = styled.p`
@@ -22,9 +18,4 @@ export const Description = styled.p`
   text-align: center;
   color: var(--text);
   margin-bottom: 65px;
-
-  ${media.greaterThan('medium')`
-    font-size: 30px;
-    line-height: 45px;
-  `}
 `
